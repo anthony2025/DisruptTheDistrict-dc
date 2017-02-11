@@ -1,8 +1,5 @@
-// require dependencies
 const mongoose = require('mongoose')
-const bodyParser = require('body-parser')
-const path = require ('path')
-const app = require('express')()
+const express = require('express')()
 
 // setting up environment variables
 require('dotenv').config({silent: false})
@@ -12,16 +9,8 @@ const DBURI = process.env.DBURI
 // setting up mongoose
 mongoose.connect(DBURI)
 
-// setting up bodyParser
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
+// setting up our router
+express.use('/', require('./router'))
 
-// setting up the express router
-const videoRouter = require('./router')
-app.use('/api/videos', videoRouter)
-
-// setting up a homepage
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/index.html')))
-
-// setting up the express server
-app.listen(PORT, () => console.log('App running on port: ' + PORT))
+// setting up our express server
+express.listen(PORT, () => console.log('Express running on port: ' + PORT))

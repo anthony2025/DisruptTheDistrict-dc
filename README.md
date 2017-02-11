@@ -9,7 +9,7 @@ Live at https://
 ### Acknowledgments
 
 ### Set up
-create a ".dotenv" file with the following string:
+create a ".env" file with the following string:
 DBURI=mongodb://<dbuser>:<dbpassword>@ds149049.mlab.com:49049/dtdmetadata
 
 <br>
