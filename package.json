@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "src/app.js",
   "engines": {
-    "node": "7.1.0"
+    "node": "7.5.0"
   },
-    "dependencies": {
+  "dependencies": {
     "body-parser": "^1.16.1",
     "dotenv": "^4.0.0",
     "express": "^4.14.1",
