@@ -9,8 +9,17 @@ Live at https://
 ### Acknowledgments
 
 ### Set up
-create a ".env" file with the following string:
-DBURI=mongodb://<dbuser>:<dbpassword>@ds149049.mlab.com:49049/dtdmetadata
+* create a file named .env with the following format:
+
+*
+
+## Metadata
+* subject
+* class
+* lecture
+* university
+* professor
+* date
 
 <br>
 

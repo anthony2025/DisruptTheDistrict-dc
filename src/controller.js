@@ -1,17 +1,28 @@
 const Video = require('./model')
 const fs = require('fs')
+const aws = require('aws-sdk');
+const uuid = require('node-uuid');
+const s3 = new aws.S3();
 
 const controller = {
   uploadVideo (req, res) {
-Task.find(req.params.taskId, (err, task) => {
-      for (let field in req.body) {
-        task.field = req.body.field
+    const params = {
+      Bucket: process.env.BUCKET_NAME,
+      Key: uuid.v4(),
+      Body: fs.readFileSync('~/Desktop/lecture1.png'),
+      Metadata: {
+        subject: 'CS',
+        class: '101',
+        lecture: 'Recursion vs. Loops',
+        university: 'University of Maryland',
+        professor: 'Roger Thomas',
+        date: Date.now()
       }
-      if (err) next(err)
-      if (task) return res.status(200).save(task)
-      res.status(404).end()
+    }
+    s3.putObject(params, (err, data) => {
+      if (err) console.log(err, err.stack);
+      else console.log(data);
     })
-  })
   }
 }
 
