@@ -7,13 +7,14 @@ const controller = {
     const params = {
       Bucket: process.env.BUCKET_NAME,
       Key: uuid.v4(),
+      Body: req.body.file,
       Metadata: {
-        subject: 'CS',
-        class: '101',
-        lecture: 'Recursion vs. Loops',
-        university: 'University of Maryland',
-        professor: 'Roger Thomas',
-        date: Date.now().toString()
+        subject: req.body.subject,
+        class: req.body.class,
+        lecture: req.body.lecture,
+        university: req.body.university,
+        professor: req.body.professor,
+        date: req.body.date
       }
     }
     s3.putObject(params, (err, data) => {

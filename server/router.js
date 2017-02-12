@@ -8,6 +8,6 @@ router.get('/', (req, res) => res.sendFile(path.join(__dirname, '../public/uploa
 router.get('/library', (req, res) => res.sendFile(path.join(__dirname, '../public/library.html')))
 router.get('/about', (req, res) => res.sendFile(path.join(__dirname, '../public/about.html')))
 router.get('/upload', (req, res) => res.sendFile(path.join(__dirname, '../public/upload.html')))
-router.post('/upload', (req, res) => {controller.uploadVideo(req,res)})
+router.post('/upload', (req, res) => {controller.uploadVideo(req, res)})
 
 module.exports = router
