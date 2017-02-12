@@ -1,7 +1,5 @@
-const fs = require('fs')
 const aws = require('aws-sdk');
 const uuid = require('node-uuid');
-const path = require('path')
 const s3 = new aws.S3();
 
 const controller = {
@@ -9,7 +7,6 @@ const controller = {
     const params = {
       Bucket: process.env.BUCKET_NAME,
       Key: uuid.v4(),
-      Body: fs.readFileSync(path.join(__dirname, 'lecture1.png')),
       Metadata: {
         subject: 'CS',
         class: '101',

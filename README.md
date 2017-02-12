@@ -1,19 +1,19 @@
 ## In Progress
-
-Live at https://
-
-### Use cases
+Made during Disrupt the District DC 2017. Live at https://
 
 ### Team
-
-### Acknowledgments
+* Praveen
+* Anthony
+* Paul
+* Eva
 
 ### Set up
-* create a file named .env with the following format:
+Create a file named .env with the following format
+AWS_ACCESS_KEY_ID=xxxx
+AWS_SECRET_ACCESS_KEY=xxxx
+BUCKET_NAME=xxxx
 
-*
-
-## Metadata
+### Metadata
 * subject
 * class
 * lecture
