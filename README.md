@@ -1,4 +1,3 @@
-## In Progress
 Made during Disrupt the District DC 2017.
 
 ### Team
