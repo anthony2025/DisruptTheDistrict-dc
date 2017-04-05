@@ -1,5 +1,5 @@
 ## In Progress
-Made during Disrupt the District DC 2017. Live at https://
+Made during Disrupt the District DC 2017.
 
 ### Team
 * Praveen
